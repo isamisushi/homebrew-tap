@@ -1,35 +1,35 @@
 class Katamari < Formula
   desc "Terminal diff-review tool with LSP — hover, go-to-definition, references and diagnostics inside a git/jj diff"
   homepage "https://github.com/isamisushi/katamari"
-  version "0.2.0"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.2.0/katamari-aarch64-apple-darwin.tar.xz"
-      sha256 "34fc3f9b10c6de72ff750f0130c078dc1799c2dca0e73d87ed7df042ffd3bc4b"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.2.1/katamari-aarch64-apple-darwin.tar.xz"
+      sha256 "117e34aa9eed1fb5308db5375893cee7e8abac5e0c0337eb3ccdf89d2fa1f516"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.2.0/katamari-x86_64-apple-darwin.tar.xz"
-      sha256 "dfd556e46b43478c445c34f66ab4ff36ebb55c5d9ecfb47811845f8f453871d6"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.2.1/katamari-x86_64-apple-darwin.tar.xz"
+      sha256 "c3a46447417f6b6ee9e2ea0ccc7405b31a0c94d74ab9513562d7f02e265c4018"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.2.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0f62e3e149be39edf3866444c643e98a474c55d3c85ced4be2439a8d379ce3a5"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.2.1/katamari-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fbbef40bb8b16671496219c785a087c9841dfe23c9e97c18b3c11841a7979a0b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.2.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cf5b1d5c5113a6eac548794605e7a91c19f91a6f8ba4b26cf4f5249fc3ee84a1"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.2.1/katamari-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4277f515214dc94bdb162841db9604152bbc21cb4e29279a3ea8d55a5c8f419f"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
+    "aarch64-apple-darwin": {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-unknown-linux-gnu":  {},
-  }.freeze
+    "x86_64-apple-darwin": {},
+    "x86_64-unknown-linux-gnu": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -47,10 +47,18 @@ class Katamari < Formula
   end
 
   def install
-    bin.install "katamari", "ktmr" if OS.mac? && Hardware::CPU.arm?
-    bin.install "katamari", "ktmr" if OS.mac? && Hardware::CPU.intel?
-    bin.install "katamari", "ktmr" if OS.linux? && Hardware::CPU.arm?
-    bin.install "katamari", "ktmr" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "katamari", "ktmr"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "katamari", "ktmr"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "katamari", "ktmr"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "katamari", "ktmr"
+    end
 
     install_binary_aliases!
 
