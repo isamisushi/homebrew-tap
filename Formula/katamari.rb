@@ -1,25 +1,25 @@
 class Katamari < Formula
   desc "Terminal diff-review tool with LSP — hover, go-to-definition, references and diagnostics inside a git/jj diff"
   homepage "https://github.com/isamisushi/katamari"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.3.0/katamari-aarch64-apple-darwin.tar.xz"
-      sha256 "c8703fab3dc540cd304b0bbcebd3f45c25451ac4edb609c4682170a853f23f34"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-aarch64-apple-darwin.tar.xz"
+      sha256 "59269ad56dae5d8a1c84c8af9081226657dcef278b64356b6631a0f595ee196b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.3.0/katamari-x86_64-apple-darwin.tar.xz"
-      sha256 "2d89cd2803e1b2456d84e26138f76ef7d32448114495a59a7cb1922794f48541"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-x86_64-apple-darwin.tar.xz"
+      sha256 "7cf858050a0449d57f8eede5fdfbe74842053fb4da380dc22e26c1e0b1a6d5e4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.3.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fd7b2b6f43935cd35fed391179c5c59396d5f07f2f0023a8d838d20c785aae2f"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c0abce13a6f6b7cbf5dc8c9b5ebed2c370df35fc77797a5abe0e29a77ff27ae0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.3.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7f1f11241c7178d30439a666b8563b7209ef7af280b78015aa44bdbb74b08a4e"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fdb7ace175c37cb39df89f8f9a95c234be0a2bb8fe1b01f4769d1bede741ad05"
     end
   end
   license "MIT"
