@@ -1,34 +1,38 @@
 class Katamari < Formula
   desc "Terminal diff-review tool with LSP — hover, go-to-definition, references and diagnostics inside a git/jj diff"
   homepage "https://github.com/isamisushi/katamari"
-  version "0.4.0"
+  version "0.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-aarch64-apple-darwin.tar.xz"
-      sha256 "59269ad56dae5d8a1c84c8af9081226657dcef278b64356b6631a0f595ee196b"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-aarch64-apple-darwin.tar.xz"
+      sha256 "cd30aa23c10b66d5bc00921223b34ffdedd7e35ee4fd2049dd46819a7fea705f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-x86_64-apple-darwin.tar.xz"
-      sha256 "7cf858050a0449d57f8eede5fdfbe74842053fb4da380dc22e26c1e0b1a6d5e4"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-x86_64-apple-darwin.tar.xz"
+      sha256 "1cf96811c9b7bad933995d85906dc059185db1e6b7ab312d8c681d7a689ad054"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c0abce13a6f6b7cbf5dc8c9b5ebed2c370df35fc77797a5abe0e29a77ff27ae0"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "54de2a90ced25f26a3836478f8b74e8dc7a752430615259112332053408329f0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fdb7ace175c37cb39df89f8f9a95c234be0a2bb8fe1b01f4769d1bede741ad05"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8bced293cd522c0790513160bf7836fc8cd7e44be1084e7d389bf83e87d2afdf"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-unknown-linux-gnu":  {},
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static":  {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
   }.freeze
 
   def target_triple
