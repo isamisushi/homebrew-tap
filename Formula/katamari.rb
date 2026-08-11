@@ -1,25 +1,25 @@
 class Katamari < Formula
   desc "Terminal diff-review tool with LSP — hover, go-to-definition, references and diagnostics inside a git/jj diff"
   homepage "https://github.com/isamisushi/katamari"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-aarch64-apple-darwin.tar.xz"
-      sha256 "cd30aa23c10b66d5bc00921223b34ffdedd7e35ee4fd2049dd46819a7fea705f"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.5.0/katamari-aarch64-apple-darwin.tar.xz"
+      sha256 "d823818df0992294277b5a4ec9827a655f9103ac62581625e07931f4c4d1feb1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-x86_64-apple-darwin.tar.xz"
-      sha256 "1cf96811c9b7bad933995d85906dc059185db1e6b7ab312d8c681d7a689ad054"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.5.0/katamari-x86_64-apple-darwin.tar.xz"
+      sha256 "4a3014c86a93cff6728075017426cea92c9ff2ef5cfae7103f932a3874fea137"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "54de2a90ced25f26a3836478f8b74e8dc7a752430615259112332053408329f0"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.5.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f7b4453b11af76bc757e53c2946986eef486454c42f33e1538934822af8494a8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.4.1/katamari-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8bced293cd522c0790513160bf7836fc8cd7e44be1084e7d389bf83e87d2afdf"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.5.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a4215223cc3ba3dbef92233453394aeed81bfae09b3122e06d1080e62bedf59d"
     end
   end
   license "MIT"
@@ -51,10 +51,18 @@ class Katamari < Formula
   end
 
   def install
-    bin.install "katamari", "ktmr" if OS.mac? && Hardware::CPU.arm?
-    bin.install "katamari", "ktmr" if OS.mac? && Hardware::CPU.intel?
-    bin.install "katamari", "ktmr" if OS.linux? && Hardware::CPU.arm?
-    bin.install "katamari", "ktmr" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "katamari", "ktmr"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "katamari", "ktmr"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "katamari", "ktmr"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "katamari", "ktmr"
+    end
 
     install_binary_aliases!
 
