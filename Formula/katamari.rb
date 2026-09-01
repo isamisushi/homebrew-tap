@@ -1,25 +1,25 @@
 class Katamari < Formula
   desc "Terminal diff-review tool with LSP — hover, go-to-definition, references and diagnostics inside a git/jj diff"
   homepage "https://github.com/isamisushi/katamari"
-  version "0.10.0"
+  version "0.11.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.10.0/katamari-aarch64-apple-darwin.tar.xz"
-      sha256 "bfa6c71ac49fbe65f34f796c67b16228b0d029b6b10db5cb11a013dc6a550190"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.11.0/katamari-aarch64-apple-darwin.tar.xz"
+      sha256 "c3769595e1162acdb718b325439d287d3c8d0768e4dce2c309d0700eeab9a94f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.10.0/katamari-x86_64-apple-darwin.tar.xz"
-      sha256 "df3e6b2c593197a981a53d5a2fc288c73ae91c25fa9af8f14d64d07c09d63d2d"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.11.0/katamari-x86_64-apple-darwin.tar.xz"
+      sha256 "c1f8887a27c86e77ad3fd40d63eae5d1ba34e3eeb9c143eaab7e47a0748f76ae"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.10.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6a6abc7db39150db37041f3514cf388f3bc7b58e7c9df68e6e7484ca2cc7f8db"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.11.0/katamari-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bc5b54956996ebbc01ca1c590d0e1f1fc428d5436cfaefe6e5e509be4694e3d2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/katamari/releases/download/v0.10.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "837757a91b5099a10c157ccc1dda2c2109383a3c57d25f83b6b852f0af60f8f3"
+      url "https://github.com/isamisushi/katamari/releases/download/v0.11.0/katamari-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "387335f8af1af24e4adeb37a159f33c2fc6563afb9dfeab0e8082bf6f7acfa97"
     end
   end
   license "MIT"
