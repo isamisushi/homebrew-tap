@@ -1,25 +1,25 @@
 class Kikimimi < Formula
   desc "Observability for AI coding agents - see what your agents actually do, locally first"
   homepage "https://github.com/isamisushi/kikimimi"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/kikimimi/releases/download/v0.2.0/kikimimi-aarch64-apple-darwin.tar.xz"
-      sha256 "1cd97ffe0cc0283e437289f0ac0f95458db416633fd69f824038c2e1df316f0e"
+      url "https://github.com/isamisushi/kikimimi/releases/download/v0.3.0/kikimimi-aarch64-apple-darwin.tar.xz"
+      sha256 "2546b8029373d83da2554de93b39cc1399e54504e2333c0b3d4d7b79168c9092"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/kikimimi/releases/download/v0.2.0/kikimimi-x86_64-apple-darwin.tar.xz"
-      sha256 "a48b8d3f05353a02cccb5611988a96f44be1448044de0f89777e4141cf86e875"
+      url "https://github.com/isamisushi/kikimimi/releases/download/v0.3.0/kikimimi-x86_64-apple-darwin.tar.xz"
+      sha256 "1c46cfab975f8398621d729db938332e836801eabcdcd2013d0e3bad615a663e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/isamisushi/kikimimi/releases/download/v0.2.0/kikimimi-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e3873b9825b6a4bc037b36360f45e80fe1d0716cc16265c74f382dadd043dc59"
+      url "https://github.com/isamisushi/kikimimi/releases/download/v0.3.0/kikimimi-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3d2c6da8a4f8640f5a925fd9406c7e5970bcbe79ef0d89ab4b5005187e1463b7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isamisushi/kikimimi/releases/download/v0.2.0/kikimimi-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2afeff5fea4757dae1178f3b6824defe3a1eba21bf5a7b236bc715fe2ac34ef4"
+      url "https://github.com/isamisushi/kikimimi/releases/download/v0.3.0/kikimimi-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b0ecf6a185a221bac3796e32b770834aab6dccd6b9878fecf1e50628291efd66"
     end
   end
   license "Apache-2.0"
